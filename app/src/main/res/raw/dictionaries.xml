@@ -1,0 +1,102 @@
+<Dictionaries>
+    <!--
+    public class DictionaryType
+    {
+        public static final int Translate = 0;
+        public static final int Dictionary = 1;
+        public static final int Synonyms = 2;
+        public static final int Usage = 3;
+        public static final int Slang= 4;
+        public static final int Acronym = 5;
+    }
+    -->
+    <DictionaryEntry>
+        <name>Google Translate</name>
+        <type>0</type>
+        <url>https://translate.google.com/?hl=%FROM%&amp;op=translate&amp;text=%TEXT%&amp;sl=%FROM%&amp;tl=%TO%&amp;tab=wT</url>
+        <!--<url>https://translate.google.com/#%FROM%/%TO%/%TEXT%</url>-->
+        <icon>google_translate</icon>
+        <urlcomposer>UrlComposerGoogleTranslate</urlcomposer>
+        <cookies>true</cookies>
+        <javascript>true</javascript>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>Linguee</name>
+        <type>0</type>
+        <url>https://www.linguee.com/%FROM%-%TO%/search?source=%FROM%&amp;query=%TEXT%</url>
+        <icon>linguee</icon>
+        <urlcomposer>UrlComposerLinguee</urlcomposer>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>WordReference</name>
+        <type>1</type>
+        <url>https://www.wordreference.com/definition/%TEXT%</url>
+        <icon>wordreference</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>Cambridge</name>
+        <type>1</type>
+        <url>https://dictionary.cambridge.org/us/dictionary/english/%TEXT%</url>
+        <icon>cambridge</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>Merriam-Webster</name>
+        <type>1</type>
+        <url>https://www.merriam-webster.com/dictionary/%TEXT%</url>
+        <icon>merriam_webster</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>Urban Dictionary</name>
+        <type>4</type>
+        <url>https://www.urbandictionary.com/define.php?term=%TEXT%</url>
+        <icon>urban</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>The Free Dictionary</name>
+        <type>1</type>
+        <url>https://www.thefreedictionary.com/%TEXT%</url>
+        <icon>freedictionary</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>WordReference Usage</name>
+        <type>3</type>
+        <url>https://www.wordreference.com/EnglishUsage/%TEXT%</url>
+        <icon>wordreference</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>The Free Dictionary thesaurus</name>
+        <type>2</type>
+        <url>https://www.freethesaurus.com/%TEXT%</url>
+        <icon>freedictionary</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>WordReference Synonyms</name>
+        <type>2</type>
+        <url>https://www.wordreference.com/synonyms/%TEXT%</url>
+        <icon>wordreference</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>The Free Dictionary Acronyms</name>
+        <type>5</type>
+        <url>https://acronyms.thefreedictionary.com/%TEXT%</url>
+        <icon>freedictionary</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>The Free Dictionary Law Dictionary</name>
+        <type>4</type>
+        <url>https://legal-dictionary.thefreedictionary.com/%TEXT%</url>
+        <icon>freedictionary</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>Merriam-Webster Legal Definition</name>
+        <type>4</type>
+        <url>https://www.merriam-webster.com/dictionary/%TEXT%#legalDictionary</url>
+        <icon>merriam_webster</icon>
+    </DictionaryEntry>
+    <DictionaryEntry>
+        <name>TechTerms</name>
+        <type>4</type>
+        <url>https://techterms.com/definition/%TEXT%</url>
+        <icon>techterms</icon>
+    </DictionaryEntry>
+</Dictionaries>

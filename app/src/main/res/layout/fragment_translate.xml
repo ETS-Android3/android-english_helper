@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TranslateFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_700"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="2dp"
+                android:layout_marginTop="2dp"
+                android:visibility="visible"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:strokeColor="@color/blue_700"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/englishTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:inputType="text"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:errorEnabled="false"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/englishText"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start|top"
+                            android:hint="English text to translate..."
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="0dp"
+                            android:textSize="16sp"
+                            app:endIconMode="clear_text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.bskim.maxheightscrollview.widgets.MaxHeightScrollView
+                        android:id="@+id/englishChipsLayoutScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="72dp"
+                        android:visibility="gone"
+                        app:maxHeight="72dp">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/englishChipsLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:alignContent="stretch"
+                            app:alignItems="stretch"
+                            app:flexWrap="wrap" />
+                        <!--        </ScrollView>-->
+                    </com.bskim.maxheightscrollview.widgets.MaxHeightScrollView>
+
+                    <View
+                        android:id="@+id/separator1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_700" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mylanguageTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:inputType="text"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:errorEnabled="false"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/mylanguageText"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start|top"
+                            android:hint="Text in My Language to translate..."
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="0dp"
+                            android:textSize="16sp"
+                            app:endIconMode="clear_text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:id="@+id/separator2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_700" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonFromMyLanguage"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:insetLeft="10dp"
+                            android:insetRight="10dp"
+                            android:text="Es→En"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_700"
+                            android:tint="@color/white"
+                            app:backgroundTint="@color/white"
+                            app:rippleColor="#FFFFFF"
+                            app:strokeColor="@color/blue_700"
+                            app:strokeWidth="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonFromEnglish"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:insetLeft="10dp"
+                            android:insetTop="6dp"
+                            android:insetRight="10dp"
+                            android:text="En→Es"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_700"
+                            android:tint="@color/white"
+                            app:backgroundTint="@color/white"
+                            app:strokeColor="@color/blue_700"
+                            app:strokeWidth="0dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonClear"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:insetLeft="10dp"
+                            android:insetTop="6dp"
+                            android:insetRight="10dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_700"
+                            android:tint="@color/white"
+                            app:backgroundTint="@color/white"
+                            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+                            app:iconPadding="0dp"
+                            app:iconTint="@color/blue_700"
+                            app:strokeColor="@color/blue_700"
+                            app:strokeWidth="0dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonEdit"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:insetLeft="10dp"
+                            android:insetTop="6dp"
+                            android:insetRight="10dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_700"
+                            android:tint="@color/white"
+                            app:backgroundTint="@color/white"
+                            app:icon="@android:drawable/ic_menu_edit"
+                            app:iconPadding="0dp"
+                            app:iconSize="24dp"
+                            app:iconTint="@color/blue_700"
+                            app:strokeColor="@color/blue_700"
+                            app:strokeWidth="0dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWeb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="2dp"
+                app:strokeColor="@color/blue_700"
+                app:strokeWidth="1dp">
+
+                <WebView
+                    android:id="@+id/web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="WebViewLayout" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        app:elevation="2dp"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/blue_700"
+        app:itemTextColor="@color/blue_700">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabDictionariesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:textAllCaps="false"
+            app:tabIconTint="@color/blue_700"
+            app:tabIndicatorColor="@color/blue_700"
+            app:tabMode="auto"
+            app:tabPadding="0dp"
+            app:tabPaddingBottom="0dp"
+            app:tabPaddingTop="0dp"
+            app:tabTextAppearance="@style/DictionaryTabs"
+            app:tabTextColor="@color/blue_700"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="66dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/arrow_up_float"
+        android:tint="@color/white"
+        app:tint="@null"
+        app:backgroundTint="@color/blue_700"
+        app:fabSize="mini"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</FrameLayout>

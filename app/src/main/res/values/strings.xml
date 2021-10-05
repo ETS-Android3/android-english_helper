@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">English Helper</string>
+    <!-- Categories -->
+    <string name="translation_engines">Translation Engines</string>
+    <string name="language">Language</string>
+
+
+    <!-- Language Preferences -->
+    <string name="select_language">Select Language</string>
+
+    <!-- Other Preferences -->
+    <string name="customize">Customize</string>
+    <string name="default_delay">1.5</string>
+    <string name="default_translation_engine">libretranslate</string>
+    <string name="default_libretranslate_server">libretranslate.de</string>
+    <string name="default_my_language">ES</string>
+    <string name="default_start_screen">translation</string>
+
+</resources>

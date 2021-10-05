@@ -1,0 +1,71 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory app:title="@string/language">
+        <androidx.preference.DropDownPreference
+            android:defaultValue="ES"
+            android:entries="@array/lang_entries"
+            android:entryValues="@array/lang_values"
+            android:key="MyLanguage"
+            android:title="My Language"
+            app:useSimpleSummaryProvider="true" />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory app:title="@string/customize">
+        <androidx.preference.DropDownPreference
+            android:entries="@array/start_page_entries"
+            android:entryValues="@array/start_page_values"
+            android:key="StartPage"
+            android:title="Start Page"
+            android:defaultValue="@string/default_start_screen"
+            app:useSimpleSummaryProvider="true"
+            />
+        <androidx.preference.SwitchPreference android:id="@+id/enable_automatic_search"
+            android:title="Automatic Search"
+            android:key="EnableAutomaticSearch"
+            android:defaultValue="true"
+        />
+        <androidx.preference.DropDownPreference
+            android:entries="@array/delay_entries"
+            android:entryValues="@array/delay_values"
+            android:key="SearchDelay"
+            android:title="Automatic search delay"
+            android:defaultValue="@string/default_delay"
+            app:useSimpleSummaryProvider="true"
+            />
+        <androidx.preference.SeekBarPreference
+            android:key="WebTextZoom"
+            android:title="Web browser text zoom"
+            android:defaultValue="120"
+            android:max="300"
+            app:min="50"
+            />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory app:title="@string/translation_engines">
+        <androidx.preference.DropDownPreference
+            android:entries="@array/engine_entries"
+            android:entryValues="@array/engine_values"
+            android:key="TranslationProvider"
+            android:title="Translation Engine"
+            android:defaultValue="@string/default_translation_engine"
+            app:useSimpleSummaryProvider="true"
+            />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.DropDownPreference
+        android:entries="@array/libretranslate_servers_values"
+        android:entryValues="@array/libretranslate_servers_values"
+        android:key="LibreTranslateServer"
+        android:title="LibreTranslate available servers"
+        android:defaultValue="@string/default_libretranslate_server"
+        app:useSimpleSummaryProvider="true"
+        />
+
+
+    <androidx.preference.EditTextPreference
+        android:title="DeepL Authentication Key"
+        android:key="DeepLAuthKey"
+        />
+
+</androidx.preference.PreferenceScreen>
