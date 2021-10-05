@@ -5,6 +5,6 @@ I wrote this little android app for myself, to avoid having lots of open diction
 
 Here is a little demo: 
 
-![](doc/henglish_helper_demo.gif =200x358)
+![](doc/henglish_helper_demo.gif)
 
 
