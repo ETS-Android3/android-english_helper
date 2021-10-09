@@ -26,6 +26,7 @@ public class TranslationProvider
 
     OnCompleted onCompleted;
     TranslationDirection direction;
+    Boolean errorProduced = false;
 
     enum RequestType { post, get }
     RequestType requestType = RequestType.get;
@@ -91,6 +92,8 @@ public class TranslationProvider
         {
             try
             {
+                if (errorProduced)
+                    return;
                 if (result.isEmpty())
                 {
                     ErrorDisplay.Show("An error was produced when translating. Check engine translation settings.");
@@ -115,6 +118,7 @@ public class TranslationProvider
         {
             if (url.isEmpty())
                 throw new Exception("Translation provider did not work properly when composing the request. Maybe the text has rare characters?");
+            errorProduced = false;
             CloseableHttpResponse response;
             CloseableHttpClient client = HttpClients.createDefault();
             HttpRequestBase request;
@@ -135,7 +139,8 @@ public class TranslationProvider
             else
             {
                 response.getEntity().getContent().close();
-                throw new IOException(response.getStatusLine().getReasonPhrase());
+                errorProduced = true;
+                throw new IOException("An error was produced when translating: [" + response.getStatusLine().getReasonPhrase() + "]");
             }
         }
         catch (Exception e)

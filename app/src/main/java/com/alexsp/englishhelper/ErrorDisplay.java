@@ -34,7 +34,7 @@ public class ErrorDisplay
     public static void Show(String errorMessage)
     {
         if (view != null)
-            Snackbar.make(view, errorMessage, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Snackbar.make(view, errorMessage, Snackbar.LENGTH_LONG).show();
         else
             ShowDialog(errorMessage);
         stopProgressBar();
@@ -46,7 +46,7 @@ public class ErrorDisplay
         if (msg == null || msg.isEmpty())
             msg = e.toString();
         if (view != null)
-            Snackbar.make(view, msg, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Snackbar.make(view, msg, Snackbar.LENGTH_LONG).show();
         else
             ShowDialog(msg);
         stopProgressBar();
