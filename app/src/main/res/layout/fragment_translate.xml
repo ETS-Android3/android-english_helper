@@ -244,14 +244,11 @@
             android:layout_height="wrap_content"
             android:scrollbars="horizontal"
             android:textAllCaps="false"
-            app:tabIconTint="@color/blue_700"
-            app:tabIndicatorColor="@color/blue_700"
             app:tabMode="auto"
             app:tabPadding="0dp"
             app:tabPaddingBottom="0dp"
             app:tabPaddingTop="0dp"
             app:tabTextAppearance="@style/DictionaryTabs"
-            app:tabTextColor="@color/blue_700"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
